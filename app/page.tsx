@@ -3,6 +3,7 @@ import foto from "@/public/foto.png";
 import cursoGit from "@/public/githubCurso.png";
 import git from "@/public/github.png";
 import ln from "@/public/Linkedin.png";
+import gmail from "@/public/gmail.png";
 import pageCoin from "@/public/page.jpeg";
 
 export default function Home() {
@@ -81,7 +82,7 @@ export default function Home() {
             </div>
           </a>
         </section>
-        <section className="flex justify-center items-center order-1 sm:order-1 mb-4 hover:scale-105" >
+        <section className="flex justify-center items-center order-1 sm:order-1 mb-4 hover:scale-105">
           <a
             href="https://javierchicano.github.io/coin-clicker-v2/"
             target="_blank"
@@ -93,7 +94,7 @@ export default function Home() {
             />
             <div className="absolute inset-0 flex items-center justify-center bg-red-400 bg-opacity-50 rounded-lg">
               <span className="text-white  font-bold text-lg sm:text-xl p-2">
-              CoinClicker
+                CoinClicker
               </span>
             </div>
           </a>
@@ -110,7 +111,7 @@ export default function Home() {
             />
             <div className="absolute inset-0 flex items-center justify-center bg-red-400 bg-opacity-50 rounded-lg">
               <span className="text-white font-bold text-lg sm:text-xl p-2">
-              CoinClicker
+                CoinClicker
               </span>
             </div>
           </a>
@@ -136,13 +137,22 @@ export default function Home() {
       </section>
       <section className="flex flex-col order-2 sm:order-1 sm:grid sm:col-span-2 sm:row-span-3 bg-fondo p-2 rounded-lg hover:scale-105 shadow-lg shadow-red-500">
         <div className="flex items-end justify-center">
-          <h1 className="text-5xl sm:text-7xl flex justify-center">
+          <h1 className="text-5xl lg:text-7xl flex justify-center">
             Javier Chicano
           </h1>
         </div>
-        <h2 className="text-xl flex justify-center">
+        <h2 className="text-xl flex justify-center lg:-mb-20">
           <em>Desarrollador Web Full Stack</em>
         </h2>
+        <a
+          href="/CV.pdf"
+          target="_blank"
+          className="flex items-start justify-center"
+        >
+          <button className="bg-contraste p-2 rounded-lg text-sm mt-1 mb-1 lg:text-base lg:-mt-4">
+            Abrir CV
+          </button>
+        </a>
       </section>
 
       <section className="flex flex-col justify-center order-4 sm:order-1 sm:col-span-2 bg-fondo p-2 rounded-lg hover:scale-105 shadow-lg shadow-red-500">
@@ -217,6 +227,14 @@ export default function Home() {
               target="_blank"
             >
               <img className="h-10 sm:h-16 hover:scale-105" src={ln.src}></img>
+            </a>
+            <a href="mailto:jchicano43@gmail.com">
+              {" "}
+              <img
+                className="h-10 sm:h-16 hover:scale-105"
+                src={gmail.src}
+                alt="Gmail"
+              ></img>
             </a>
           </div>
         </section>
