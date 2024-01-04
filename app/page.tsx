@@ -37,7 +37,7 @@ export default function Home() {
             </h1>
             <div className="flex mt-2">
               <p className="text-sm">
-                Curso de git y github, impartida por Microsoft.
+                Curso de git y github, impartido por Microsoft.
               </p>
             </div>
           </article>
@@ -53,7 +53,7 @@ export default function Home() {
             </h1>
             <div className="flex mt-2">
               <p className="text-sm">
-                Curso de git y github, impartida Microsoft.
+                Curso de git y github, impartido Microsoft.
               </p>
             </div>
           </article>
@@ -118,13 +118,11 @@ export default function Home() {
         </section>
       </section>
       <section className="flex flex-col justify-center order-3 sm:order-1 sm:row-span-3 bg-fondo p-2 rounded-lg hover:scale-105 shadow-lg shadow-red-500">
-        <div className="sm:-mt-6">
-          <CajaTitulo
-            datos={{
-              titulo: "Sobre mí",
-            }}
-          />
-        </div>
+        <CajaTitulo
+          datos={{
+            titulo: "Sobre mí",
+          }}
+        />
 
         <p className="text-xs sm:text-base p-2">
           Estudiante apasionado por aprender y crecer en un entorno dinámico.
@@ -161,7 +159,7 @@ export default function Home() {
             titulo: "Tecnologías",
           }}
         />
-        <section className="flex flex-row justify-center gap-2 mb-4">
+        <section className="flex flex-row justify-center gap-2 mb-4 mt-2">
           <img
             className="h-10 sm:h-16"
             src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original-wordmark.svg"
