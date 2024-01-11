@@ -67,7 +67,7 @@ export default function Home() {
         />
         <section className="flex justify-center items-center order-1 sm:order-1 mb-4 hover:scale-105">
           <a
-            href="https://javierchicano.github.io/coin-clicker-v2/"
+            href="https://cookie-clicker-v3.vercel.app/"
             target="_blank"
             className="relative"
           >
@@ -84,7 +84,7 @@ export default function Home() {
         </section>
         <section className="flex justify-center items-center order-1 sm:order-1 mb-4 hover:scale-105">
           <a
-            href="https://javierchicano.github.io/coin-clicker-v2/"
+            href="https://cookie-clicker-v3.vercel.app/"
             target="_blank"
             className="relative"
           >
@@ -101,7 +101,7 @@ export default function Home() {
         </section>
         <section className="flex justify-center items-center order-1 sm:order-1 mb-4 hover:scale-105">
           <a
-            href="https://javierchicano.github.io/coin-clicker-v2/"
+            href="https://cookie-clicker-v3.vercel.app/"
             target="_blank"
             className="relative"
           >
