@@ -7,7 +7,6 @@ import git from "@/public/github.png";
 import ln from "@/public/Linkedin.png";
 import close from "@/public/close.png";
 import gmail from "@/public/gmail.png";
-import { usePanelCoinClicker, usePanelMind2Mind } from "@/states/states";
 import pageCoin from "@/public/CoinClicker.png";
 import pageCoin2 from "@/public/CoinClicker2.png";
 import pageM2M from "@/public/Mind2Mind.png";
@@ -28,11 +27,12 @@ import tailwind from "@/public/lenguajes/tailwind.png";
 import { useState } from "react";
 import CodigoM2MAJAX from "@/codeSnippet/codigoM2MAJAX";
 import CodigoM2MPHP from "@/codeSnippet/codigoM2MPHP";
+import { cn } from "@/lib/utils";
 
 export default function Home() {
-  const { verPanel1, setVerPanel1 } = usePanelCoinClicker();
-  const { verPanel2, setVerPanel2 } = usePanelMind2Mind();
   const [verProyecto1, setProyecto1] = useState(false);
+  const [verProyecto2, setProyecto2] = useState(false);
+  console.log(verProyecto2);
 
   return (
     <>
@@ -96,7 +96,7 @@ export default function Home() {
           <section
             className="flex justify-center items-center order-1 sm:order-1 mb-4 hover:scale-105 cursor-pointer"
             onClick={() => {
-              verPanel1 ? setVerPanel1(false) : setVerPanel1(true);
+              setProyecto1(true);
             }}
           >
             <article className="relative w-72">
@@ -111,7 +111,12 @@ export default function Home() {
               </div>
             </article>
           </section>
-          <section className="flex justify-center items-center order-1 sm:order-1 mb-4 hover:scale-105 cursor-pointer ">
+          <section
+            className="flex justify-center items-center order-1 sm:order-1 mb-4 hover:scale-105 cursor-pointer "
+            onClick={() => {
+              setProyecto2(true);
+            }}
+          >
             <article className="relative w-72">
               <img
                 className="h-40  rounded-lg overflow-hidden shadow-lg shadow-red-500"
@@ -127,7 +132,7 @@ export default function Home() {
           <section
             className="flex justify-center items-center order-1 sm:order-1 mb-4 hover:scale-105 cursor-pointer"
             onClick={() => {
-              verPanel2 ? setVerPanel2(false) : setVerPanel2(true);
+              setProyecto1(true);
             }}
           >
             <article className="relative w-72">
@@ -143,12 +148,7 @@ export default function Home() {
             </article>
           </section>
         </section>
-        <section
-          className="flex flex-col justify-center order-3 sm:order-1 sm:row-span-3 bg-fondo p-2 rounded-lg hover:scale-105 shadow-lg shadow-red-500"
-          onClick={() => {
-            verPanel1 ? setVerPanel1(false) : setVerPanel1(true);
-          }}
-        >
+        <section className="flex flex-col justify-center order-3 sm:order-1 sm:row-span-3 bg-fondo p-2 rounded-lg hover:scale-105 shadow-lg shadow-red-500">
           <CajaTitulo
             datos={{
               titulo: "Sobre mí",
@@ -190,7 +190,7 @@ export default function Home() {
               titulo: "Tecnologías",
             }}
           />
-          <section className="flex flex-row justify-center gap-2 mb-4 mt-2">
+          <section className="flex flex-row justify-center gap-6 mb-4 mt-2">
             <img className="h-10 sm:h-16" src={react.src} />
             <img className="h-10 sm:h-16" src={php.src} />
             <img className="h-10 sm:h-16" src={java.src} />
@@ -257,11 +257,23 @@ export default function Home() {
 
       {/* Vetanas modales de los proyectos */}
       {/* Proyecto Coin Clicker */}
-      <section className="hidden absolute h-full w-full bg-black/60 z-5 top-0 flex items-center justify-center">
+      <section
+        className={cn(
+          verProyecto1
+            ? " absolute h-full w-full bg-black/60 z-5 top-0 flex items-center justify-center"
+            : "hidden"
+        )}
+      >
         <section className="flex bg-fondo h-4/5 w-3/5 rounded-3xl p-20 flex-col overflow-y-scroll">
           <span className="flex justify-end -mt-8 mb-3">
             {/* Que cuando Se haga click cambie el estado */}
-            <img src={close.src} className="w-10 cursor-pointer" />
+            <img
+              src={close.src}
+              className="w-10 cursor-pointer"
+              onClick={() => {
+                setProyecto1(false);
+              }}
+            />
           </span>
           <h1 className="text-3xl border-b w-full mb-8 flex justify-between ">
             <a
@@ -323,25 +335,29 @@ export default function Home() {
                 <img src={pageCoin2.src} className="h-72"></img>
               </a>
               {/* Lenguajes usados en el proyecto */}
-              <article className="w-1/2 flex flex-col pl-20">
-                <div className="flex justify-start items-center gap-10 my-4">
+              <article className="w-1/2 grid grid-rows-5 justify-center gap-4 self-center">
+                <div className="flex items-center gap-10">
                   <img src={react.src} className="h-10 w-10"></img>
                   <p>Lenguaje base del proyecto</p>
                 </div>
-                <div className="flex items-center gap-10 mb-2">
+                <div className="flex items-center gap-10">
                   <img src={nextjs.src} className="h-10 w-10"></img>
                   <p>Framework de react</p>
                 </div>
-                <div className="flex items-center gap-10 mb-2">
+                <div className="flex items-center gap-10">
                   <img src={ts.src} className="h-10 w-10"></img>
                   <p>Gestión de la lógica</p>
                 </div>
-                <div className="flex items-center gap-10 mb-2">
-                  <img src={zustand.src} className="h-10 w-10"></img>
+                <div className="flex items-center gap-10">
+                  <div className="w-10">
+                    <img src={zustand.src}></img>
+                  </div>
                   <p>Gestión de estados</p>
                 </div>
-                <div className="flex items-center gap-10 mb-2">
-                  <img src={tailwind.src} className="h-10 w-10"></img>
+                <div className="flex items-center gap-10">
+                  <div className="w-10">
+                    <img src={tailwind.src}></img>
+                  </div>
                   <p>Estilos css de la página</p>
                 </div>
               </article>
@@ -444,11 +460,23 @@ export default function Home() {
         </section>
       </section>
       {/* Proyecto Mind 2 Mind */}
-      <section className="hidden absolute h-full w-full bg-black/60 z-5 top-0 flex items-center justify-center">
+      <section
+        className={cn(
+          verProyecto2
+            ? "absolute h-full w-full bg-black/60 z-5 top-0 flex items-center justify-center"
+            : "hidden"
+        )}
+      >
         <section className="flex bg-fondo h-4/5 w-3/5 rounded-3xl p-20 flex-col overflow-y-scroll">
           <span className="flex justify-end -mt-8 mb-3">
             {/* Que cuando Se haga click cambie el estado */}
-            <img src={close.src} className="w-10 cursor-pointer" />
+            <img
+              src={close.src}
+              className="w-10 cursor-pointer"
+              onClick={() => {
+                setProyecto2(false);
+              }}
+            />
           </span>
           <h1 className="text-3xl border-b w-full mb-8 flex justify-between ">
             <a
@@ -509,21 +537,23 @@ export default function Home() {
                 <img src={pageM2M2.src} className="h-72"></img>
               </a>
               {/* Lenguajes usados en el proyecto */}
-              <article className="w-1/2 flex flex-col pl-20">
-                <div className="flex justify-start items-center gap-10 mb-4 mt-10">
+              <article className="w-1/2 grid grid-rows-4 justify-center gap-5 self-center">
+                <div className="flex items-center gap-10">
                   <img src={html.src} className="h-10 w-10"></img>
                   <p>Maquetación de la web</p>
                 </div>
-                <div className="flex items-center gap-10 mb-2">
+                <div className="flex items-center gap-10">
                   <img src={css.src} className="h-10 w-10"></img>
                   <p>Estilos css de la página</p>
                 </div>
-                <div className="flex items-center gap-10 mb-2">
+                <div className="flex items-center gap-10">
                   <img src={js.src} className="h-10 w-10"></img>
                   <p>Gestión de la lógica</p>
                 </div>
-                <div className="flex items-center gap-10 mb-2">
-                  <img src={php.src} className="h-10 w-10"></img>
+                <div className="flex items-center gap-10">
+                  <div className="w-10">
+                    <img src={php.src}></img>
+                  </div>
                   <p>Gestión de la BBDD y sus consultas</p>
                 </div>
               </article>

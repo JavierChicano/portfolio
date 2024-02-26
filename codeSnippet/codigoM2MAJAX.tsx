@@ -42,8 +42,8 @@ const CodigoM2MAJAX = () => {
   //Estado
   const [copiar, setCopiar] = useState(false);
   return (
-    <div className="bg-gray-800 rounded-lg overflow-hidden w-2/3">
-      <aside className="flex justify-between px-4 text-white text-sm items-center p-2">
+    <div className=" rounded-lg overflow-hidden w-2/3">
+      <aside className="flex justify-between px-4 text-white text-sm items-center p-2 bg-emerald-800">
         <p className="text-sm">Código de ejemplo</p>
         {copiar ? (
           <button className="py-1 items-center gap-2 flex">

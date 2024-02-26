@@ -13,7 +13,6 @@ const CodigoM2MJS = () => {
     var apellidos = document.getElementById("apellidosRegistro").value;
     var email = document.getElementById("emailRegistro").value;
     var password = document.getElementById("passwordRegistro").value;
-
     //Se validan los formularios
 
     //Se llama al método que los pasa através de ajax al php
