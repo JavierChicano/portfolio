@@ -142,7 +142,7 @@ export default function ProyectoMind2Mind() {
           </section>
           {/* Primera explicacion  */}
           <div className="flex justify-around gap-20 p-4 mb-4 border-b border-zinc-800">
-            <CodigoM2MJS />
+            {/* <CodigoM2MJS /> */}
             <p className="w-1/2 self-center">
               Una vez que el usuario envía el formulario con sus datos, el
               código JavaScript captura los valores de los campos y los valida.
@@ -153,7 +153,7 @@ export default function ProyectoMind2Mind() {
             </p>
           </div>
           <div className="flex justify-around gap-20 p-4 mb-4 border-b border-zinc-800">
-            <p className="w-1/2 self-center">
+            <aside className="w-1/2 self-center">
               Este es el método{" "}
               <span className="italic"> insertarRegistro,</span> que utiliza la
               función $.ajax() de jQuery para enviar datos al archivo php
@@ -169,12 +169,12 @@ export default function ProyectoMind2Mind() {
                 sesión mediante <span className="italic">sessionStorage</span> y
                 se redirige al usuario a la página perfil/perfilMain.html
               </p>
-            </p>
+            </aside>
             <CodigoM2MAJAX />
           </div>
           <div className="flex justify-around gap-20 p-4 mb-4 border-b border-zinc-800">
             <CodigoM2MPHP />
-            <p className="w-1/3 self-center">
+            <aside className="w-1/3 self-center">
               Obteniendo las variables, comprueba con un select a la bbdd si el
               usuario existe, si existe pasa el siguiente mensage al ajax
               "Correo electronico ya registrado", en el caso de que no exista lo
@@ -184,7 +184,7 @@ export default function ProyectoMind2Mind() {
                 Por ultimo pasa <span className="italic">$response</span> al
                 ajax por medio de <span className="italic">json_encode</span>
               </p>
-            </p>
+            </aside>
           </div>
         </section>
       </section>

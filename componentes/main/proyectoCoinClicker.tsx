@@ -150,7 +150,7 @@ export default function ProyectoCoinClicker() {
           </section>
           {/* Primera explicacion  */}
           <div className="flex justify-around gap-20 p-4 mb-4 border-b border-zinc-800">
-            <p className="w-1/2">
+            <aside className="w-1/2">
               Se han generado múltiples intervalos debido a la{" "}
               <span className="font-semibold text-emerald-400">
                 generación repetitiva de componentes.
@@ -160,7 +160,7 @@ export default function ProyectoCoinClicker() {
               <span className="font-semibold text-emerald-400">
                 creación ilimitada de intervalos.
               </span>
-            </p>
+            </aside>
             <p className="w-1/2">
               <span className="font-semibold text-emerald-400">
                 Se incluyó el intervalo en el layout,
@@ -175,7 +175,7 @@ export default function ProyectoCoinClicker() {
           </div>
           {/* Segunda explicacion  */}
           <div className="flex justify-around gap-20 p-4 mb-4 border-b border-zinc-800">
-            <p className="w-1/2">
+            <aside className="w-1/2">
               Se plantea la cuestión de{" "}
               <span className="font-semibold text-emerald-400">
                 cómo acceder a cada componente,
@@ -184,7 +184,7 @@ export default function ProyectoCoinClicker() {
               <span className="font-semibold text-emerald-400">
                 todos son idénticos y se generan de manera infinita.
               </span>
-            </p>
+            </aside>
             <p className="w-1/2">
               Se implementó la{" "}
               <span className="font-semibold text-emerald-400">

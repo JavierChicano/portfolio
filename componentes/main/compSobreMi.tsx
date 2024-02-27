@@ -8,7 +8,6 @@ export default function SobreMi() {
           titulo: "Sobre mí",
         }}
       />
-
       <p className="text-xs sm:text-base p-2">
         Estudiante apasionado por aprender y crecer en un entorno dinámico.
       </p>
