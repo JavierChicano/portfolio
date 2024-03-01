@@ -26,7 +26,7 @@ const CodigoM2MJS = () => {
   //Estado
   const [copiar, setCopiar] = useState(false);
   return (
-    <div className="bg-gray-800 rounded-lg overflow-hidden">
+    <div className="bg-emerald-800 rounded-lg overflow-hidden">
       <aside className="flex justify-between px-4 text-white text-sm items-center p-2">
         <p className="text-sm">Código de ejemplo</p>
         {copiar ? (

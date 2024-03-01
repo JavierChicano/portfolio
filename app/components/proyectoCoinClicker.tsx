@@ -39,7 +39,7 @@ export default function ProyectoCoinClicker() {
       <section
         className={cn(
           verProyecto1
-            ? " absolute h-full w-full bg-black/60 z-5 flex top-0 items-center justify-center col-start-1"
+            ? " fixed h-full w-full bg-black/60 z-10 flex top-0 left-0 items-center justify-center"
             : "hidden"
         )}
       >
@@ -172,8 +172,9 @@ export default function ProyectoCoinClicker() {
               </span>
             </aside>
             <p className="w-1/2">
+              Se incluyó el{" "}
               <span className="font-semibold text-emerald-400">
-                Se incluyó el intervalo en el layout,
+                intervalo en el layout,
               </span>{" "}
               en lugar de en el componente De esta manera, se generará
               únicamente una vez, proporcionando una{" "}

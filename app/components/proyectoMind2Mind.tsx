@@ -41,7 +41,7 @@ export default function ProyectoMind2Mind() {
       <section
         className={cn(
           verProyecto1
-            ? "absolute h-full w-full bg-black/60 z-5 top-0 flex items-center justify-center"
+            ? " fixed h-full w-full bg-black/60 z-10 flex top-0 left-0 items-center justify-center"
             : "hidden"
         )}
       >
@@ -189,10 +189,10 @@ export default function ProyectoMind2Mind() {
             <CodigoM2MPHP />
             <aside className="w-1/3 self-center">
               Obteniendo las variables, comprueba con un select a la bbdd si el
-              usuario existe, si existe pasa el siguiente mensage al ajax
-              "Correo electronico ya registrado", en el caso de que no exista lo
-              inserta en la tabla paciente e imprime el mensaje "Resgistro
-              exitoso"
+              usuario existe, si existe pasa el siguiente mensage al ajax &quot
+              Correo electronico ya registrado&quot, en el caso de que no exista
+              lo inserta en la tabla paciente e imprime el mensaje
+              &quotResgistro exitoso&quot
               <p className="my-4">
                 Por ultimo pasa <span className="italic">$response</span> al
                 ajax por medio de <span className="italic">json_encode</span>
