@@ -13,7 +13,7 @@ export default function Home() {
       <section className="flex justify-center items-center order-1 sm:order-1">
         <div className="relative">
           <Image
-            className="h-48 lg:h-64 rounded-full  shadow-lg shadow-red-500"
+            className="h-48 lg:h-64 w-auto rounded-full  shadow-lg shadow-red-500"
             src="/foto.png"
             alt="Foto de perfil"
             width={256}

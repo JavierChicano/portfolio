@@ -3,13 +3,13 @@ import Image from "next/image";
 
 export default function Tecnologias() {
   return (
-    <section className="flex flex-col justify-center order-4 sm:order-1 sm:col-span-2 bg-fondo p-2 rounded-lg hover:scale-105 shadow-lg shadow-red-500">
+    <section className="flex flex-col justify-center order-4 sm:order-1 sm:col-span-2 bg-fondo p-2 rounded-lg hover:scale-105 shadow-lg shadow-red-500 ">
       <CajaTitulo
         datos={{
           titulo: "Tecnologías",
         }}
       />
-      <section className="flex flex-row justify-center gap-6 mb-4 mt-2">
+      <section className="flex flex-row justify-center gap-6 mb-4 mt-2 flex-wrap px-10">
         <Image
           className="h-10 w-auto sm:h-16 "
           src="/lenguajes/react.png"

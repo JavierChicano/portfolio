@@ -39,13 +39,12 @@ export default function ProyectoCoinClicker() {
       <section
         className={cn(
           verProyecto1
-            ? " fixed h-full w-full bg-black/60 z-10 flex top-0 left-0 items-center justify-center"
+            ? "fixed h-full w-full bg-black/60 z-10 flex top-0 left-0 items-center justify-center"
             : "hidden"
         )}
       >
-        <section className="flex bg-fondo h-4/5 w-3/5 rounded-3xl p-20 flex-col overflow-y-scroll">
+        <section className="flex bg-fondo sm:h-4/5 sm:w-3/5 sm:rounded-3xl h-full w-full p-16 sm:p-20 flex-col overflow-y-scroll">
           <span className="flex justify-end -mt-8 mb-3">
-            {/* Que cuando Se haga click cambie el estado */}
             <Image
               className="h-full w-10 cursor-pointer"
               src="/close.png"
@@ -57,9 +56,9 @@ export default function ProyectoCoinClicker() {
               }}
             />
           </span>
-          <h1 className="text-3xl border-b w-full mb-8 flex justify-between ">
+          <h1 className="text-3xl border-b w-full mb-8 flex justify-between sm:flex-row flex-col">
             <a
-              className="text-3xl"
+              className="sm:text-3xl text-2xl"
               href="https://cookie-clicker-v3.vercel.app/"
               target="_blank"
             >
@@ -100,17 +99,17 @@ export default function ProyectoCoinClicker() {
                 href="https://cookie-clicker-v3.vercel.app/"
                 target="_blank"
               >
-                <h1 className="text-xl w-1/2 flex justify-center">
+                <h1 className="text-xl sm:w-1/2 flex justify-center">
                   Link al proyecto
                 </h1>
               </a>
-              <h1 className="text-xl w-1/2 flex justify-center">
+              <h1 className="text-xl w-1/2 sm:flex justify-center hidden">
                 Herramientas
               </h1>
             </div>
-            <div className="flex justify-around my-4 ">
+            <div className="flex justify-around my-4 sm:flex-row flex-col">
               <a
-                className="w-1/2 flex justify-center"
+                className="sm:w-1/2 flex justify-center"
                 href="https://cookie-clicker-v3.vercel.app/"
                 target="_blank"
               >
@@ -122,8 +121,11 @@ export default function ProyectoCoinClicker() {
                   height={500}
                 />
               </a>
+              <h1 className="text-xl sm:hidden flex justify-center pt-5 mb-10 border-t border-zinc-800">
+                Herramientas
+              </h1>
               {/* Lenguajes usados en el proyecto */}
-              <article className="w-1/2 grid grid-rows-5 justify-center gap-4 self-center">
+              <article className="sm:w-1/2 grid grid-rows-5 justify-center gap-4 self-center">
                 <div className="flex items-center gap-10">
                   <img src={react.src} className="h-10 w-10"></img>
                   <p>Lenguaje base del proyecto</p>
@@ -152,15 +154,17 @@ export default function ProyectoCoinClicker() {
             </div>
           </section>
           {/* Explicacion de las problemas y soluciones */}
-          <section className="flex justify-around mb-4">
-            <h1 className="text-xl w-1/2 flex justify-center">
+          <section className="flex justify-around mb-4 sm:flex-row flex-col">
+            <h1 className="text-xl sm:w-1/2 flex justify-center">
               Problemas afrontados
             </h1>
-            <h1 className="text-xl w-1/2 flex justify-center">Soluciones</h1>
+            <h1 className="text-xl w-1/2 sm:flex justify-center hidden">
+              Soluciones
+            </h1>
           </section>
           {/* Primera explicacion  */}
-          <div className="flex justify-around gap-20 p-4 mb-4 border-b border-zinc-800">
-            <aside className="w-1/2">
+          <div className="flex justify-around gap-8 sm:gap-20 p-4 mb-4 border-b border-zinc-800 flex-wrap sm:flex-nowrap">
+            <aside className="sm:w-1/2">
               Se han generado múltiples intervalos debido a la{" "}
               <span className="font-semibold text-emerald-400">
                 generación repetitiva de componentes.
@@ -171,7 +175,7 @@ export default function ProyectoCoinClicker() {
                 creación ilimitada de intervalos.
               </span>
             </aside>
-            <p className="w-1/2">
+            <p className="sm:w-1/2">
               Se incluyó el{" "}
               <span className="font-semibold text-emerald-400">
                 intervalo en el layout,
@@ -185,59 +189,60 @@ export default function ProyectoCoinClicker() {
             </p>
           </div>
           {/* Segunda explicacion  */}
-          <div className="flex justify-around gap-20 p-4 mb-4 border-b border-zinc-800">
-            <aside className="w-1/2">
-              Se plantea la cuestión de{" "}
+          <div className="flex justify-around gap-8 sm:gap-20 p-4 mb-4 border-b border-zinc-800 flex-wrap sm:flex-nowrap">
+            <aside className="sm:w-1/2">
+              Se plantea la cuestión de cómo{" "}
               <span className="font-semibold text-emerald-400">
-                cómo acceder a cada componente,
-              </span>
+                acceder a cada componente,
+              </span>{" "}
               considerando que{" "}
               <span className="font-semibold text-emerald-400">
-                todos son idénticos y se generan de manera infinita.
-              </span>
+                todos son idénticos
+              </span>{" "}
+              y se generan de manera infinita.
             </aside>
-            <p className="w-1/2">
+            <p className="sm:w-1/2">
               Se implementó la{" "}
               <span className="font-semibold text-emerald-400">
                 creación de un mapa
               </span>{" "}
-              que utiliza la clave de la fila para{" "}
-              <span className="font-semibold text-emerald-400">
-                asociar un objeto que contiene todos los datos del componente
-                respectivo.
-              </span>
+              que utiliza la clave de la fila para asociar un{" "}
+              <span className="font-semibold text-emerald-400"> objeto</span>{" "}
+              que contiene todos los{" "}
+              <span className="font-semibold text-emerald-400">datos</span> del
+              componente respectivo.
             </p>
           </div>
           {/* Tercera explicacion */}
-          <div className="flex justify-around gap-20 p-4 mb-4 border-b border-zinc-800">
-            <p className="w-1/2">
+          <div className="flex justify-around gap-8 sm:gap-20 p-4 mb-4 border-b border-zinc-800 flex-wrap sm:flex-nowrap">
+            <p className="sm:w-1/2">
               Adaptar la{" "}
               <span className="font-semibold text-emerald-400">
                 version de escritorio a movil.
               </span>
             </p>
-            <p className="w-1/2">
+            <p className="sm:w-1/2">
               Se consolidan{" "}
               <span className="font-semibold text-emerald-400">
                 múltiples columnas en una sola,
               </span>{" "}
-              y se implementa una{" "}
+              y se implementa una funcionalidad de{" "}
               <span className="font-semibold text-emerald-400">
-                funcionalidad de navegación mediante flechas
+                navegación mediante flechas
               </span>{" "}
               para alternar entre ellas.
             </p>
           </div>
           {/* Cuarta explicacion */}
-          <div className="flex justify-around gap-20 p-4 mb-4 border-b border-zinc-800">
-            <p className="w-1/2">
-              Conforme avanzaba el juego,{" "}
+          <div className="flex justify-around gap-8 sm:gap-20 p-4 mb-4 border-b border-zinc-800 flex-wrap sm:flex-nowrap">
+            <p className="sm:w-1/2">
+              Conforme avanzaba el juego, las{" "}
               <span className="font-semibold text-emerald-400">
-                las unidades de medida de las monedas
+                 unidades de medida de las monedas
               </span>{" "}
               se volvían excesivamente grandes e inmanejables.
             </p>
-            <p className="w-1/2">
+            <p className="sm:w-1/2">
               Se ha creado una{" "}
               <span className="font-semibold text-emerald-400">
                 página dedicada a la gestión de unidades,

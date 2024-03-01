@@ -45,7 +45,7 @@ export default function ProyectoMind2Mind() {
             : "hidden"
         )}
       >
-        <section className="flex bg-fondo h-4/5 w-3/5 rounded-3xl p-20 flex-col overflow-y-scroll">
+        <section className="flex bg-fondo sm:h-4/5 sm:w-3/5 sm:rounded-3xl h-full w-full p-16 sm:p-20 flex-col overflow-y-scroll">
           <span className="flex justify-end -mt-8 mb-3">
             {/* Que cuando Se haga click cambie el estado */}
 
@@ -60,9 +60,9 @@ export default function ProyectoMind2Mind() {
               }}
             />
           </span>
-          <h1 className="text-3xl border-b w-full mb-8 flex justify-between ">
+          <h1 className="text-3xl border-b w-full mb-8 flex justify-between sm:flex-row flex-col">
             <a
-              className="text-3xl"
+              className="sm:text-3xl text-2xl"
               href="https://javierchicano.github.io/Mind2Mind/"
               target="_blank"
             >
@@ -102,17 +102,17 @@ export default function ProyectoMind2Mind() {
                 href="https://javierchicano.github.io/Mind2Mind/"
                 target="_blank"
               >
-                <h1 className="text-xl w-1/2 flex justify-center">
+                <h1 className="text-xl sm:w-1/2 flex justify-center">
                   Link al proyecto
                 </h1>
               </a>
-              <h1 className="text-xl w-1/2 flex justify-center">
+              <h1 className="text-xl w-1/2 sm:flex justify-center hidden">
                 Herramientas
               </h1>
             </div>
-            <div className="flex justify-around my-4 ">
+            <div className="flex justify-around my-4 sm:flex-row flex-col">
               <a
-                className="w-1/2 flex justify-center"
+                className="sm:w-1/2 flex justify-center"
                 href="https://javierchicano.github.io/Mind2Mind/"
                 target="_blank"
               >
@@ -124,8 +124,11 @@ export default function ProyectoMind2Mind() {
                   height={500}
                 />
               </a>
+              <h1 className="text-xl sm:hidden flex justify-center pt-5 mb-10 border-t border-zinc-800">
+                Herramientas
+              </h1>
               {/* Lenguajes usados en el proyecto */}
-              <article className="w-1/2 grid grid-rows-4 justify-center gap-5 self-center">
+              <article className="sm:w-1/2 grid grid-rows-4 justify-center gap-5 self-center">
                 <div className="flex items-center gap-10">
                   <img src={html.src} className="h-10 w-10"></img>
                   <p>Maquetación de la web</p>
@@ -149,14 +152,14 @@ export default function ProyectoMind2Mind() {
           </section>
           {/* Explicacion de las problemas y soluciones */}
           <section className="flex justify-around mb-4">
-            <h1 className="text-xl w-1/2 flex justify-center">
+            <h1 className="text-xl sm:w-1/2 flex justify-center text-center">
               Explicación del funcionamiento interno
             </h1>
           </section>
           {/* Primera explicacion  */}
-          <div className="flex justify-around gap-20 p-4 mb-4 border-b border-zinc-800">
+          <div className="flex justify-around gap-20 p-4 mb-4 border-b border-zinc-800 sm:flex-row flex-col">
             <CodigoM2MJS />
-            <p className="w-1/2 self-center">
+            <p className="sm:w-1/2 self-center">
               Una vez que el usuario envía el formulario con sus datos, el
               código JavaScript captura los valores de los campos y los valida.
               Una vez confirmada su corrección, invoca el método
@@ -165,8 +168,8 @@ export default function ProyectoMind2Mind() {
               del formulario.
             </p>
           </div>
-          <div className="flex justify-around gap-20 p-4 mb-4 border-b border-zinc-800">
-            <aside className="w-1/2 self-center">
+          <div className="flex justify-around gap-20 p-4 mb-4 border-b border-zinc-800 sm:flex-row flex-col">
+            <aside className="sm:w-1/2 self-center order-2 sm:order-none">
               Este es el método{" "}
               <span className="italic"> insertarRegistro,</span> que utiliza la
               función $.ajax() de jQuery para enviar datos al archivo php
@@ -185,9 +188,9 @@ export default function ProyectoMind2Mind() {
             </aside>
             <CodigoM2MAJAX />
           </div>
-          <div className="flex justify-around gap-20 p-4 mb-4 border-b border-zinc-800">
+          <div className="flex justify-around gap-20 p-4 border-b border-zinc-800 sm:flex-row flex-col">
             <CodigoM2MPHP />
-            <aside className="w-1/3 self-center">
+            <aside className="sm:w-1/3 self-center">
               Obteniendo las variables, comprueba con un select a la bbdd si el
               usuario existe, si existe pasa el siguiente mensage al ajax &quot
               Correo electronico ya registrado&quot, en el caso de que no exista

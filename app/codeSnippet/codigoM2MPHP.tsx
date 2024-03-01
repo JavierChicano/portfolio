@@ -49,9 +49,9 @@ const CodigoM2MPHP = () => {
   //Estado
   const [copiar, setCopiar] = useState(false);
   return (
-    <div className="bg-emerald-800 rounded-lg overflow-hidden w-2/3">
+    <div className="bg-emerald-800 rounded-lg overflow-hidden sm:w-2/3">
       <aside className="flex justify-between px-4 text-white text-sm items-center p-2">
-        <p className="text-sm">Código de ejemplo</p>
+        <p className="text-sm sm:block hidden">Código de ejemplo</p>
         {copiar ? (
           <button className="py-1 items-center gap-2 flex">
             <img style={{ width: "15px" }} src={check.src}></img>
