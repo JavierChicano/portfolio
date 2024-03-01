@@ -1,16 +1,16 @@
 "use client";
 import { cn } from "@/lib/utils";
-import close from "@/public/close.png";
 import { useState } from "react";
 import pageM2M2 from "@/public/Mind2Mind2.png";
-import CodigoM2MJS from "@/codeSnippet/codigoM2MJS";
 import pageM2M from "@/public/Mind2Mind.png";
 import html from "@/public/lenguajes/html.png";
 import js from "@/public/lenguajes/js.png";
 import php from "@/public/lenguajes/php.png";
 import css from "@/public/lenguajes/css.png";
-import CodigoM2MAJAX from "@/codeSnippet/codigoM2MAJAX";
-import CodigoM2MPHP from "@/codeSnippet/codigoM2MPHP";
+import CodigoM2MPHP from "../codeSnippet/codigoM2MPHP";
+import CodigoM2MAJAX from "../codeSnippet/codigoM2MAJAX";
+import CodigoM2MJS from "../codeSnippet/codigoM2MJS";
+import Image from "next/image";
 
 export default function ProyectoMind2Mind() {
   const [verProyecto1, setProyecto1] = useState(false);
@@ -23,9 +23,12 @@ export default function ProyectoMind2Mind() {
         }}
       >
         <article className="relative w-72">
-          <img
-            className="h-40  rounded-lg overflow-hidden shadow-lg shadow-red-500"
-            src={pageM2M.src}
+          <Image
+            className="h-40 w-full rounded-lg overflow-hidden shadow-lg shadow-red-500"
+            src="/Mind2Mind.png"
+            alt="Proyecto Mind2Mind"
+            width={256}
+            height={256}
           />
           <div className="absolute inset-0 flex items-center justify-center bg-red-400 bg-opacity-50 rounded-lg">
             <span className="text-white  font-bold text-lg sm:text-xl p-2">
@@ -45,9 +48,13 @@ export default function ProyectoMind2Mind() {
         <section className="flex bg-fondo h-4/5 w-3/5 rounded-3xl p-20 flex-col overflow-y-scroll">
           <span className="flex justify-end -mt-8 mb-3">
             {/* Que cuando Se haga click cambie el estado */}
-            <img
-              src={close.src}
-              className="w-10 cursor-pointer"
+
+            <Image
+              className="h-full w-10 cursor-pointer"
+              src="/close.png"
+              alt="Close"
+              width={256}
+              height={256}
               onClick={() => {
                 setProyecto1(false);
               }}
@@ -109,7 +116,13 @@ export default function ProyectoMind2Mind() {
                 href="https://javierchicano.github.io/Mind2Mind/"
                 target="_blank"
               >
-                <img src={pageM2M2.src} className="h-72"></img>
+                <Image
+                  className="h-72 w-auto"
+                  src="/Mind2Mind2.png"
+                  alt="Proyecto Mind2Mind"
+                  width={500}
+                  height={500}
+                />
               </a>
               {/* Lenguajes usados en el proyecto */}
               <article className="w-1/2 grid grid-rows-4 justify-center gap-5 self-center">
@@ -142,7 +155,7 @@ export default function ProyectoMind2Mind() {
           </section>
           {/* Primera explicacion  */}
           <div className="flex justify-around gap-20 p-4 mb-4 border-b border-zinc-800">
-            {/* <CodigoM2MJS /> */}
+            <CodigoM2MJS />
             <p className="w-1/2 self-center">
               Una vez que el usuario envía el formulario con sus datos, el
               código JavaScript captura los valores de los campos y los valida.

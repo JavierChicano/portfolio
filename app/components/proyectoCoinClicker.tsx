@@ -1,14 +1,12 @@
 "use client";
 import { useState } from "react";
-import pageCoin from "@/public/CoinClicker.png";
 import { cn } from "@/lib/utils";
-import close from "@/public/close.png";
 import zustand from "@/public/lenguajes/zustand.png";
 import nextjs from "@/public/lenguajes/nextjs.png";
 import ts from "@/public/lenguajes/ts.png";
 import tailwind from "@/public/lenguajes/tailwind.png";
 import react from "@/public/lenguajes/react.png";
-import pageCoin2 from "@/public/CoinClicker2.png";
+import Image from "next/image";
 
 export default function ProyectoCoinClicker() {
   const [verProyecto1, setProyecto1] = useState(false);
@@ -22,9 +20,12 @@ export default function ProyectoCoinClicker() {
         }}
       >
         <article className="relative w-72">
-          <img
+          <Image
             className="h-40 w-full rounded-lg overflow-hidden shadow-lg shadow-red-500"
-            src={pageCoin.src}
+            src="/CoinClicker.png"
+            alt="Proyecto CoinClicker"
+            width={256}
+            height={256}
           />
           <div className="absolute inset-0 flex items-center justify-center bg-red-400 bg-opacity-50 rounded-lg">
             <span className="text-white font-bold text-lg sm:text-xl p-2">
@@ -38,16 +39,19 @@ export default function ProyectoCoinClicker() {
       <section
         className={cn(
           verProyecto1
-            ? " absolute h-full w-full bg-black/60 z-5 top-0 flex items-center justify-center"
+            ? " absolute h-full w-full bg-black/60 z-5 flex top-0 items-center justify-center col-start-1"
             : "hidden"
         )}
       >
         <section className="flex bg-fondo h-4/5 w-3/5 rounded-3xl p-20 flex-col overflow-y-scroll">
           <span className="flex justify-end -mt-8 mb-3">
             {/* Que cuando Se haga click cambie el estado */}
-            <img
-              src={close.src}
-              className="w-10 cursor-pointer"
+            <Image
+              className="h-full w-10 cursor-pointer"
+              src="/close.png"
+              alt="Close"
+              width={256}
+              height={256}
               onClick={() => {
                 setProyecto1(false);
               }}
@@ -110,7 +114,13 @@ export default function ProyectoCoinClicker() {
                 href="https://cookie-clicker-v3.vercel.app/"
                 target="_blank"
               >
-                <img src={pageCoin2.src} className="h-72"></img>
+                <Image
+                  className="h-72 w-auto"
+                  src="/CoinClicker2.png"
+                  alt="Proyecto CoinClicker"
+                  width={500}
+                  height={500}
+                />
               </a>
               {/* Lenguajes usados en el proyecto */}
               <article className="w-1/2 grid grid-rows-5 justify-center gap-4 self-center">

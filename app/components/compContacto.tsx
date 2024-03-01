@@ -1,7 +1,5 @@
 import CajaTitulo from "./cajaTitulo";
-import git from "@/public/github.png";
-import ln from "@/public/Linkedin.png";
-import gmail from "@/public/gmail.png";
+import Image from "next/image";
 
 export default function Contact() {
   return (
@@ -15,21 +13,34 @@ export default function Contact() {
       <section className="flex flex-row justify-center ">
         <div className=" flex flex-row justify-center gap-6 mb-4 rounded-lg bg-secundario p-3">
           <a href="https://github.com/JavierChicano" target="_blank">
-            <img className="h-10 sm:h-16 hover:scale-105" src={git.src}></img>
+            <Image
+              className="h-10 sm:h-16 hover:scale-105 w-full"
+              src="/github.png"
+              alt="Logo github"
+              width={200}
+              height={200}
+            />
           </a>
           <a
             href="https://www.linkedin.com/in/javier-chicano-miguel-28b580297/"
             target="_blank"
           >
-            <img className="h-10 sm:h-16 hover:scale-105" src={ln.src}></img>
+            <Image
+              className="h-10 sm:h-16 hover:scale-105 w-full"
+              src="/linkedin.png"
+              alt="Logo Linkedin"
+              width={200}
+              height={200}
+            />
           </a>
           <a href="mailto:jchicano43@gmail.com">
-            {" "}
-            <img
-              className="h-10 sm:h-16 hover:scale-105"
-              src={gmail.src}
-              alt="Gmail"
-            ></img>
+            <Image
+              className="h-10 sm:h-16 hover:scale-105 w-full"
+              src="/gmail.png"
+              alt="Logo Gmail"
+              width={200}
+              height={200}
+            />
           </a>
         </div>
       </section>

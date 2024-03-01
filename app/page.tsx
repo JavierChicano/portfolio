@@ -1,22 +1,24 @@
-import foto from "@/public/foto.png";
-import Cursos from "@/componentes/main/compCursos";
-import Proyectos from "@/componentes/main/compProyectos";
-import SobreMi from "@/componentes/main/compSobreMi";
-import Nombre from "@/componentes/main/compNombre";
-import Tecnologias from "@/componentes/main/compTecnologias";
-import Competencias from "@/componentes/main/compCompetencias";
-import Contact from "@/componentes/main/compContacto";
+import Image from "next/image";
+import Competencias from "./components/compCompetencias";
+import Contact from "./components/compContacto";
+import Cursos from "./components/compCursos";
+import Nombre from "./components/compNombre";
+import Proyectos from "./components/compProyectos";
+import SobreMi from "./components/compSobreMi";
+import Tecnologias from "./components/compTecnologias";
 
 export default function Home() {
   return (
     <main className="flex flex-col sm:grid sm:grid-cols-4 justify-center m-4 sm:m-8 gap-8">
       <section className="flex justify-center items-center order-1 sm:order-1">
         <div className="relative">
-          <img
+          <Image
             className="h-48 lg:h-64 rounded-full  shadow-lg shadow-red-500"
-            src={foto.src}
+            src="/foto.png"
             alt="Foto de perfil"
-          ></img>
+            width={256}
+            height={256}
+          />
         </div>
       </section>
       <Cursos />
