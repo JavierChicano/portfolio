@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function CursoGitHub() {
     return (
-        <article className="bg-secundario rounded-lg p-2 relative hidden xl:block hover:scale-105 shadow shadow-white hover:shadow-red-500 ">
+        <article className="bg-secundario rounded-lg p-2 relative hidden sm:block hover:scale-105 shadow shadow-white hover:shadow-red-500 ">
           <Image
             className="h-40 w-full"
             src="/githubCurso.png"

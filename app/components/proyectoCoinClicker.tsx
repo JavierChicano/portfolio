@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
 import zustand from "@/public/lenguajes/zustand.png";
 import nextjs from "@/public/lenguajes/nextjs.png";
@@ -10,7 +10,19 @@ import Image from "next/image";
 
 export default function ProyectoCoinClicker() {
   const [verProyecto1, setProyecto1] = useState(false);
+  useEffect(() => {
+    const handleKeyPress = (e: { key: string; }) => {
+      if (e.key === "Escape") {
+        setProyecto1(false);
+      }
+    };
 
+    document.addEventListener("keydown", handleKeyPress);
+
+    return () => {
+      document.removeEventListener("keydown", handleKeyPress);
+    };
+  }, []);
   return (
     <>
       <section
@@ -42,8 +54,14 @@ export default function ProyectoCoinClicker() {
             ? "fixed h-full w-full bg-black/60 z-10 flex top-0 left-0 items-center justify-center"
             : "hidden"
         )}
+        onClick={() => {
+          setProyecto1(false);
+        }}
       >
-        <section className="flex bg-fondo sm:h-4/5 sm:w-3/5 sm:rounded-3xl h-full w-full p-16 sm:p-20 flex-col overflow-y-scroll">
+        <section className="flex bg-fondo sm:h-4/5 sm:w-3/5 sm:rounded-3xl h-full w-full p-16 sm:p-20 flex-col overflow-y-scroll"
+        onClick={(e) => {
+          e.stopPropagation(); 
+        }}>
           <span className="flex justify-end -mt-8 mb-3">
             <Image
               className="h-full w-10 cursor-pointer"

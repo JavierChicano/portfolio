@@ -1,6 +1,6 @@
 "use client";
 import { cn } from "@/lib/utils";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import pageM2M2 from "@/public/Mind2Mind2.png";
 import pageM2M from "@/public/Mind2Mind.png";
 import html from "@/public/lenguajes/html.png";
@@ -14,6 +14,19 @@ import Image from "next/image";
 
 export default function ProyectoMind2Mind() {
   const [verProyecto1, setProyecto1] = useState(false);
+  useEffect(() => {
+    const handleKeyPress = (e: { key: string; }) => {
+      if (e.key === "Escape") {
+        setProyecto1(false);
+      }
+    };
+
+    document.addEventListener("keydown", handleKeyPress);
+
+    return () => {
+      document.removeEventListener("keydown", handleKeyPress);
+    };
+  }, []);
   return (
     <>
       <section
@@ -44,11 +57,15 @@ export default function ProyectoMind2Mind() {
             ? " fixed h-full w-full bg-black/60 z-10 flex top-0 left-0 items-center justify-center"
             : "hidden"
         )}
+        onClick={() => {
+          setProyecto1(false);
+        }}
       >
-        <section className="flex bg-fondo sm:h-4/5 sm:w-3/5 sm:rounded-3xl h-full w-full p-16 sm:p-20 flex-col overflow-y-scroll">
+        <section className="flex bg-fondo sm:h-4/5 sm:w-3/5 sm:rounded-3xl h-full w-full p-16 sm:p-20 flex-col overflow-y-scroll"
+        onClick={(e) => {
+            e.stopPropagation(); 
+          }}>
           <span className="flex justify-end -mt-8 mb-3">
-            {/* Que cuando Se haga click cambie el estado */}
-
             <Image
               className="h-full w-10 cursor-pointer"
               src="/close.png"
