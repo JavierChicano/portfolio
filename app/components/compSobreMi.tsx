@@ -8,13 +8,12 @@ export default function SobreMi() {
           titulo: "Sobre mí",
         }}
       />
-      <p className="text-xs sm:text-base p-2">
-        Estudiante apasionado por aprender y crecer en un entorno dinámico.
-      </p>
       <p className="text-xs sm:text-sm p-2 mb-2 -mt-2">
-        Entusiasta de la informática y de la innovación, actualmente, estoy
-        cursando un ciclo superior, buscando así, aplicar mis habilidades y
-        conocimientos adquiridos en un entorno profesional.
+        Profesional apasionado por el aprendizaje continuo y el desarrollo en
+        entornos dinámicos. Con un ferviente interés en la informática y la
+        innovación, cuento con experiencia previa en un ciclo superior y estoy
+        comprometido a aplicar mis habilidades y conocimientos en un entorno
+        profesional.
       </p>
     </section>
   );

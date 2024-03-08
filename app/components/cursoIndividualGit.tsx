@@ -14,8 +14,8 @@ export default function CursoGitHub() {
             GitHub Universe Cloud Skills Challenge
           </h1>
           <div className="flex mt-2">
-            <p className="text-sm">
-              Curso de git y github, impartido Microsoft.
+            <p className="text-sm ">
+              Curso de git y github<span className="hidden xl:inline">, impartido Microsoft</span>.
             </p>
           </div>
         </article>
