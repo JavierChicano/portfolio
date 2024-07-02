@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function Tecnologias() {
   return (
-    <section className="flex flex-col justify-center order-4 sm:order-1 sm:col-span-2 bg-fondo p-2 rounded-lg hover:scale-105 shadow-lg shadow-red-500 ">
+    <section className="flex flex-col order-5 sm:order-1 sm:col-span-2 bg-fondo p-2 rounded-lg hover:scale-105 shadow-lg shadow-red-500 ">
       <CajaTitulo
         datos={{
           titulo: "Tecnologías",

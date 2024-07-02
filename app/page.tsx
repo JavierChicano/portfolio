@@ -1,11 +1,11 @@
 import Image from "next/image";
 import Competencias from "./components/compCompetencias";
 import Contact from "./components/compContacto";
-import Cursos from "./components/compCursos";
 import Nombre from "./components/compNombre";
 import Proyectos from "./components/compProyectos";
 import SobreMi from "./components/compSobreMi";
 import Tecnologias from "./components/compTecnologias";
+import Experiencia from "./components/compExperiencia";
 
 export default function Home() {
   return (
@@ -21,7 +21,7 @@ export default function Home() {
           />
         </div>
       </section>
-      <Cursos />
+      <Experiencia />
       <Proyectos />
       <SobreMi />
       <Nombre />

@@ -1,6 +1,7 @@
 import CajaTitulo from "./cajaTitulo";
 import ProyectoCoinClicker from "./proyectoCoinClicker";
 import ProyectoMind2Mind from "./proyectoMind2Mind";
+import ProyectoSacoba from "./proyectoSacoba";
 
 
 export default function Proyectos() {
@@ -11,7 +12,7 @@ export default function Proyectos() {
           titulo: "Proyectos",
         }}
       />
-      <ProyectoCoinClicker />
+      <ProyectoSacoba />
       <ProyectoMind2Mind/>
       <ProyectoCoinClicker />
     </section>
