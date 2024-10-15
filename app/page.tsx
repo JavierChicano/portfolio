@@ -9,11 +9,11 @@ import Experiencia from "./components/compExperiencia";
 
 export default function Home() {
   return (
-    <main className="flex flex-col sm:grid sm:grid-cols-4 justify-center m-4 sm:m-8 gap-8">
+    <main className="flex flex-col sm:grid sm:grid-cols-4 justify-center mt-8 m-4 gap-8">
       <section className="flex justify-center items-center order-1 sm:order-1">
         <div className="relative">
           <Image
-            className="h-48 lg:h-64 w-auto rounded-full  shadow-lg shadow-red-500"
+            className="h-48 lg:h-64 w-auto rounded-full boxShadow"
             src="/foto.png"
             alt="Foto de perfil"
             width={256}

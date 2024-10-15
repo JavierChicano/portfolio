@@ -33,20 +33,20 @@ export default function ProyectoSacoba() {
       >
         <article className="relative w-72">
           <Image
-            className="h-40 w-full rounded-lg overflow-hidden shadow-lg shadow-red-500"
+            className="h-40 w-full rounded-lg overflow-hidden boxShadow"
             src="/Sacoba.png"
             alt="Proyecto Sacoba"
             width={256}
             height={256}
           />
-          <div className="absolute inset-0 flex items-center justify-center bg-red-400 bg-opacity-50 rounded-lg">
-            <span className="text-white  font-bold text-lg sm:text-xl p-2">
+          <div className="absolute inset-0 flex items-center justify-center bg-white bg-opacity-50 rounded-lg">
+            <span className="font-bold text-lg sm:text-xl p-2 backdrop-blur-md rounded-xl">
               Sacoba
             </span>
           </div>
         </article>
       </section>
-      {/* Proyecto Mind 2 Mind */}
+      {/* Proyecto Sacoba */}
       <section
         className={cn(
           verProyecto1
@@ -58,7 +58,7 @@ export default function ProyectoSacoba() {
         }}
       >
         <section
-          className="flex bg-fondo sm:h-4/5 sm:w-3/5 sm:rounded-3xl h-full w-full p-16 sm:p-20 flex-col overflow-y-scroll"
+          className="flex fondoTarjeta shadow-lg shadow-black/40 sm:h-4/5 sm:w-3/5 sm:rounded-l-3xl h-full w-full p-16 sm:p-20 flex-col overflow-y-scroll"
           onClick={(e) => {
             e.stopPropagation();
           }}
@@ -75,13 +75,13 @@ export default function ProyectoSacoba() {
               }}
             />
           </span>
-          <h1 className="text-3xl border-b w-full mb-8 flex justify-between sm:flex-row flex-col">
+          <h1 className="text-3xl border-b border-white/50 w-full mb-8 flex justify-between sm:flex-row flex-col">
             <a
               className="sm:text-3xl text-2xl"
               href="https://www.sacoba.es/"
               target="_blank"
             >
-              Proyecto <span className="text-amber-600">Sacoba</span>
+              Proyecto <span className="text-amber-500">Sacoba</span>
             </a>
             <a
               className="text-xl font-semibold text-emerald-400 italic"

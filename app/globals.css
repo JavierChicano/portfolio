@@ -3,21 +3,8 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 255, 255, 255;
-  --background-start-rgb: 0, 0, 0;
-  --background-end-rgb: 0, 0, 0;
-
-  --fondo: #161717;
-  --secundario: #212222;
-  --contraste: #b90d31;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+  --contraste: #fcba06;
+  --color-tarjeta: #e0e0e0;
 }
 
 body {
@@ -28,4 +15,39 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+}
+
+/* global.scss */
+.neumorphism {
+  border-radius: 12px;
+  background: linear-gradient(145deg, #f0f0f0, #cacaca);
+  box-shadow: 11px 11px 22px #a1a1a1, -11px -11px 22px #ffffff;
+}
+
+.boxShadow {
+  box-shadow: 11px 11px 22px #a1a1a1, -11px -11px 22px #ffffff;
+}
+
+.fondoTarjeta{
+  background: linear-gradient(145deg, #f0f0f0, #cacaca);
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+  background: #fcba06;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #e09145;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #fcba06;
 }

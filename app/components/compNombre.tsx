@@ -1,8 +1,8 @@
 export default function Nombre() {
   return (
-    <section className="flex flex-col order-2 sm:order-1 sm:grid sm:col-span-2 sm:row-span-3 bg-fondo sm:p-2 py-6  rounded-lg hover:scale-105 shadow-lg shadow-red-500">
+    <section className="flex flex-col order-2 sm:order-1 sm:grid sm:col-span-2 sm:row-span-3 bg-fondo sm:p-2 py-6  rounded-lg neumorphism">
       <div className="flex items-end justify-center">
-        <h1 className="text-5xl lg:text-7xl flex justify-center">
+        <h1 className="text-5xl lg:text-7xl flex justify-center font-semibold">
           Javier Chicano
         </h1>
       </div>

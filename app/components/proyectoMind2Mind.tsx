@@ -37,14 +37,14 @@ export default function ProyectoMind2Mind() {
       >
         <article className="relative w-72">
           <Image
-            className="h-40 w-full rounded-lg overflow-hidden shadow-lg shadow-red-500"
+            className="h-40 w-full rounded-lg overflow-hidden boxShadow"
             src="/Mind2Mind.png"
             alt="Proyecto Mind2Mind"
             width={256}
             height={256}
           />
-          <div className="absolute inset-0 flex items-center justify-center bg-red-400 bg-opacity-50 rounded-lg">
-            <span className="text-white  font-bold text-lg sm:text-xl p-2">
+          <div className="absolute inset-0 flex items-center justify-center bg-white bg-opacity-50 rounded-lg">
+            <span className="font-bold text-lg sm:text-xl p-2 backdrop-blur-md rounded-xl">
               Mind 2 Mind
             </span>
           </div>
@@ -61,7 +61,7 @@ export default function ProyectoMind2Mind() {
           setProyecto1(false);
         }}
       >
-        <section className="flex bg-fondo sm:h-4/5 sm:w-3/5 sm:rounded-3xl h-full w-full p-16 sm:p-20 flex-col overflow-y-scroll"
+        <section className="flex fondoTarjeta shadow-lg shadow-black/40 sm:h-4/5 sm:w-3/5 sm:rounded-l-3xl h-full w-full p-16 sm:p-20 flex-col overflow-y-scroll"
         onClick={(e) => {
             e.stopPropagation(); 
           }}>
@@ -77,7 +77,7 @@ export default function ProyectoMind2Mind() {
               }}
             />
           </span>
-          <h1 className="text-3xl border-b w-full mb-8 flex justify-between sm:flex-row flex-col">
+          <h1 className="text-3xl border-b border-white/50 w-full mb-8 flex justify-between sm:flex-row flex-col">
             <a
               className="sm:text-3xl text-2xl"
               href="https://javierchicano.github.io/Mind2Mind/"

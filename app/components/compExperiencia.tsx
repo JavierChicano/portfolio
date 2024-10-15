@@ -2,9 +2,10 @@ import CajaTitulo from "./cajaTitulo";
 import Empresa from "./experienciaEmpresa";
 
 const descripcionDeloitte = "En Delivery Analyst Financial Crime and Fraud Prevention, trabajando con clientes y la herramienta Actimize"
+
 export default function Experiencia() {
   return (
-    <section className="order-4 sm:order-1 sm:col-span-2 bg-fondo flex flex-col p-2 rounded-lg shadow-lg shadow-red-500">
+    <section className="order-4 sm:order-1 sm:col-span-2 flex flex-col p-2 neumorphism">
       <CajaTitulo
         datos={{
           titulo: "Experiencia",

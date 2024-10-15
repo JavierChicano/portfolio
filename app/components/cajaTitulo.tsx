@@ -7,7 +7,7 @@ type CajaTituloParams = {
     const { titulo } = datos;
     return (
         <div className="flex p-2">
-          <h1 className="text-xl sm:text-2xl mb-2 rounded-lg p-2 bg-contraste">
+          <h1 className="text-xl sm:text-2xl mb-2 rounded-lg p-2 bg-contraste font-medium">
            {titulo}
           </h1>
         </div>
