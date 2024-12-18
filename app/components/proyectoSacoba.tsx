@@ -127,7 +127,7 @@ export default function ProyectoSacoba() {
             <div className="flex justify-around my-4 sm:flex-row flex-col">
               <a
                 className="sm:w-1/2 flex justify-center"
-                href="https://javierchicano.github.io/Mind2Mind/"
+                href="https://www.sacoba.es/"
                 target="_blank"
               >
                 <Image
